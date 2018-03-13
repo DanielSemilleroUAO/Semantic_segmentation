@@ -1,2 +1,8 @@
+%CORRECCIÓN QUE IMPIDE LA INSTALACIÓN DE LOS PAQUETAS EN UBUNTU.
+sudo fuser -vki /var/lib/dpkg/lock
+sudo rm -f /var/lib/dpkg/lock
+sudo dpkg --configure -a
+sudo apt-get autoremove
+%%% INSTALAR TENSORFLOW.
 sudo apt-get install python-pip
 sudo pip install tensorflow
